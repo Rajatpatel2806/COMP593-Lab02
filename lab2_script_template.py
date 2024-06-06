@@ -12,7 +12,8 @@ def main():
 
 
     # Step 3 - Add another movie to the data structure
-    
+    data['movies'].append({'title': 'the godfather', 'genre': 'crime'})
+
     
 # TODO: Step 4 - Function that prints student name and ID	
 def print_student_name_and_id(about_me):
