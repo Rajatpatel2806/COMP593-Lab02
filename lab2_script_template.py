@@ -41,7 +41,7 @@ def print_pizza_toppings(data):
 
 # TODO: Step 7 - Function that prints comma-separated list of movie genres
 def print_movie_genres(data):
-    genres = [movies['genre'] for movie in data['movie']]
+    genres = [movie['genre'] for movie in data['movie']]
     if len(genres) >1:
         genres_text = ', '.join(genres[:-1]) + ', and ' +genres[-1]
     else:
@@ -51,7 +51,13 @@ def print_movie_genres(data):
     return 
 
 # TODO: Step 8 - Function that prints comma-separated list of movie titles
-def print_movie_titles(movie_list):
+def print_movie_titles(movies):
+    titles = [movie['title'].title() for movie in movies]
+    if len(titles) > 1:
+        titles_text = ', '.join(titles[:-1]) + ', and ' + titles[-1]
+    else:
+        titles_text = titles[0]
+    print(f"Some of my favourite movies are {titles_text}!")
     return
     
 if __name__ == '__main__':
