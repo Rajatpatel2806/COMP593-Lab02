@@ -20,12 +20,15 @@ def print_student_name_and_id(data):
     full_name = data['full_name']
     first_name = full_name.split()[0]
     print(f"My name is {full_name}, but you can call me Mr. {first_name}.")
-    print(f"My student ID is {data{student_id}}.")
+    print(f"My student ID is {data['student_id']}.")
     print() 
     return
     
-# TODO: Step 5 - Function that adds pizza toppings to data structure
-def add_pizza_toppings(about_me, toppings):
+# Step 5 - Function that adds pizza toppings to data structure
+def add_pizza_toppings(data, toppings):
+    data['pizza_toppings'].extend(toppings)
+    data['pizza_toppings'] = sorted(data['pizza_toppings'])
+    data['pizza_toppings'] = [topping.lower() for topping in data['pizza_toppings']]
     return
 
 # TODO: Step 6 - Function that prints bullet list of pizza toppings
