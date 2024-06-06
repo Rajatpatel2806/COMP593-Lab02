@@ -15,8 +15,13 @@ def main():
     data['movies'].append({'title': 'the godfather', 'genre': 'crime'})
 
     
-# TODO: Step 4 - Function that prints student name and ID	
-def print_student_name_and_id(about_me):
+# Step 4 - Function that prints student name and ID	
+def print_student_name_and_id(data):
+    full_name = data['full_name']
+    first_name = full_name.split()[0]
+    print(f"My name is {full_name}, but you can call me Mr. {first_name}.")
+    print(f"My student ID is {data{student_id}}.")
+    print() 
     return
     
 # TODO: Step 5 - Function that adds pizza toppings to data structure
